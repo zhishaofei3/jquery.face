@@ -41,20 +41,20 @@ a{
         </div>
         <a href="javascript:;" class="sina-face-handle">表情</a>
     </div>
-
-    <div class="sina-face-wrap">
-        <input  class="sina-face-area" style="width: 500px;" /><a href="javascript:;" class="sina-face-handle">表情</a>
-    </div>
-
-    
-    
+   
 </div>
+
+<script type="text/html" id="tpl">
+<div class="sina-face-wrap">
+    <input  class="sina-face-area" style="width: 500px;" /><a href="javascript:;" class="sina-face-handle">表情</a>
+</div>
+</script>
+
 <script type="text/javascript" src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
 <script type="text/javascript" src="./jquery.sinaface.min.js"></script>
 <script type="text/javascript">
     $.sinaface({path : 'face/'});
-
-
+    $('#box').append($('#tpl').html())
 
 </script>
 </body>
