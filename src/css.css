@@ -1,0 +1,52 @@
+.sina-face{
+    z-index: 300;
+    width: 455px;
+    font-size: 12px;
+    background: #fff;
+    overflow: hidden;
+    position: absolute;
+    display: none;
+    border: 1px solid #E8E8E8;
+}
+
+.sina-face-head{
+    padding: 10px 10px 0 10px;
+    height: 20px;
+    overflow: hidden;
+    
+}
+.sina-face-head a{
+    margin: 0 8px 0 0;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 5px;
+    height: 20px;
+    line-height: 20px;
+    display: inline-block;
+    float: left;
+    padding: 0 5px;
+}
+.sina-face-head a.current{
+    background: #ccc;
+}
+.sina-face-body{
+    zoom:1;
+    padding: 1px;
+    margin: 9px 0 9px 9px;
+    overflow: hidden;
+}
+
+.sina-face-body a{
+    width: 22px;
+    width: 22px;
+    padding: 3px;
+    display: block;
+    float: left;
+    border:1px solid #e8e8e8;
+    margin: -1px 0 0 -1px;
+}
+.sina-face-body a:hover{
+    border:1px solid #0095cd;
+    position: relative;
+    z-index: 1;
+}
