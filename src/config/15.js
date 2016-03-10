@@ -1,41 +1,6 @@
 module.exports = {
     en: 'xyj',
     cn: '小幺鸡',
-    data: [
-        "xyjgongyi,微博益起来",
-        "xyjfengle,疯了",
-        "xyjsajiao,撒娇",
-        "xyjtuxue,吐血",
-        "xyjlangxiao,浪笑",
-        "xyjzuoyi,作揖",
-        "xyjaiya,哎呀",
-        "xyjguale,挂了",
-        "xyjniuyangge,扭秧歌",
-        "xyjmeiyan,媚眼",
-        "xyjlaima,来嘛",
-        "xyjceng,蹭",
-        "longnianxyjyu,年年有鱼",
-        "longnianxyjhb,红包",
-        "longnianxyjbai,拜年",
-        "chn_zhuashafa,抓沙发",
-        "chn_zhenhan,震撼",
-        "chn_yun,晕晕",
-        "chn_xiayan,瞎眼",
-        "chn_weinan,为难",
-        "chn_tian,舔",
-        "chn_liuhan,流汗",
-        "chn_leng,冷",
-        "chn_laoda,老大",
-        "chn_keshui,瞌睡",
-        "chn_kelian,可怜的",
-        "chn_kafei,咖啡咖啡",
-        "chn_huaixiao,坏笑",
-        "chn_ding,顶啊",
-        "chn_deyi,好得意",
-        "chn_chonga,冲啊",
-        "chn_chixigua,吃西瓜",
-        "chn_buyaoya,不要啊",
-        "chn_biaolei,飙泪中",
-        "chn_aini,爱你哦"
-    ]
+    data: "微博益起来,疯了,撒娇,吐血,浪笑,作揖,哎呀,挂了,扭秧歌,媚眼,来嘛,蹭,年年有鱼,红包,拜年,抓沙发,震撼,晕晕,瞎眼,为难,舔,流汗,冷,老大,瞌睡,可怜的,咖啡咖啡,坏笑,顶啊,好得意,冲啊,吃西瓜,不要啊,飙泪中,爱你哦"
+    
 };

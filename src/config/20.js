@@ -1,37 +1,5 @@
 module.exports = {
     en: 'bed',
     cn: '彼尔德',
-    data: [
-        "brddengtui,蹬腿",
-        "brdtantiao,弹跳",
-        "brdche,扯",
-        "brdlingluan,凌乱",
-        "brdbenpao,奔跑",
-        "brdyangwoqizuo,仰卧起坐",
-        "brdchuyu,出浴",
-        "brdlianyao,练腰",
-        "brdpi,皮",
-        "brdnaoyang,挠痒",
-        "brdlalala,啦啦啦",
-        "brdjuyaling,举哑铃",
-        "brdpiaohu,飘忽",
-        "brdpaishou,拍手",
-        "brdheiha,嘿哈",
-        "brdtabu,踏步",
-        "brdrouyan,揉眼",
-        "brdzhuanquan,转圈",
-        "brdfeiwen,飞吻",
-        "brdtiao,跳",
-        "brdbazhang,巴掌",
-        "brdsajiao,撒娇",
-        "brdpailian,拍脸",
-        "brdhaobao,好饱",
-        "brdpao,跑",
-        "brdxingfen,兴奋",
-        "brdxinlongnian,新",
-        "brdnianlongnian,年",
-        "brdlongnian,拜年",
-        "brdjinlongnian,谨",
-        "brdhelongnian,贺"
-    ]
+    data: "蹬腿,弹跳,扯,凌乱,奔跑,仰卧起坐,出浴,练腰,皮,挠痒,啦啦啦,举哑铃,飘忽,拍手,嘿哈,踏步,揉眼,转圈,飞吻,跳,巴掌,撒娇,拍脸,好饱,跑,兴奋,新,年,拜年,谨,贺"
 };

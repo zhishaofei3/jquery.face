@@ -1,39 +1,6 @@
 module.exports = {
     en: 'moc',
     cn: '摩丝摩丝',
-    data: [
-        "mocshengrikuaile,生日快乐",
-        "moczizhong,自重",
-        "moczhuangtou,转头",
-        "moczhuangku,装酷",
-        "moczhuanfa,转发",
-        "moczhongjian,中箭",
-        "mocyun,晕",
-        "mocxiu,羞",
-        "mocweiguan,围观",
-        "mocwanan,晚安",
-        "moctantiao,弹跳",
-        "mocshihua,石化",
-        "mocshengqi,生气",
-        "mocqinqinzuo,亲亲女",
-        "mocqinqinyou,亲亲男",
-        "mocqinqinwen,亲吻",
-        "mocqiangwen,强吻",
-        "mocpaizhao,拍照",
-        "mocoutu,呕吐",
-        "mocmaochu,冒出",
-        "mocluguo,路过",
-        "mockanqingchu,看清楚",
-        "mocjiebing,结冰",
-        "mocji,挤",
-        "mocguilian,鬼脸",
-        "mocganga,尴尬",
-        "mocfuyun,浮云",
-        "mocding,顶",
-        "mocdaku,大哭",
-        "mocdakouchi,大口吃",
-        "mocdaji,打击",
-        "mocciyaxiao,呲牙笑",
-        "mocchelian,扯脸"
-    ]
+    data: "生日快乐,自重,转头,装酷,转发,中箭,晕,羞,围观,晚安,弹跳,石化,生气,亲亲女,亲亲男,亲吻,强吻,拍照,呕吐,冒出,路过,看清楚,结冰,挤,鬼脸,尴尬,浮云,顶,大哭,大口吃,打击,呲牙笑,扯脸"
+    
 };

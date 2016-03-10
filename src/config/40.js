@@ -1,30 +1,5 @@
 module.exports = {
     en: 'dx',
     cn: '大熊',
-    data: ["longniandx,拜年",
-        "daxiongzhadan,炸弹",
-        "daxiongxizao,洗澡",
-        "daxiongwozhua,握爪",
-        "daxiongshuluo,数落",
-        "daxiongshuaya,刷牙",
-        "daxiongsha,傻",
-        "daxiongshai,晒",
-        "daxiongpaomeiyan,抛媚眼",
-        "daxiongpaipaishou,拍拍手",
-        "daxiongoye,耶",
-        "daxiongniu,扭",
-        "daxiongmeiyou,没有",
-        "daxiongmaimeng,卖萌",
-        "daxionglianhong,脸红",
-        "daxiongleibenxiong,泪奔",
-        "daxiongjiayouxiong,加油",
-        "daxiongjiaotache,脚踏车",
-        "daxionghuaxin,花心",
-        "daxionghuanle,欢乐",
-        "daxionghuaban,滑板",
-        "daxiongdao,倒",
-        "daxiongchaoren,超人",
-        "daxiongbao,饱",
-        "daxiongai,哎"
-    ]
+    data: "拜年,炸弹,洗澡,握爪,数落,刷牙,傻,晒,抛媚眼,拍拍手,耶,扭,没有,卖萌,脸红,泪奔,加油,脚踏车,花心,欢乐,滑板,倒,超人,饱,哎"
 };
