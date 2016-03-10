@@ -12,15 +12,17 @@ module.exports = {
         return $(require('./layout.html'));
     },
     creatBody: function(res, opt) {
-        return $.map(res.data, function(item) {
-            var text = item.split(',');
+
+        var data = res.data.split(',');
+
+        return $.map(data, function(item, index) {
             var data = {
                 name: res.en,
-                src: opt.path + res.en + '/' + text[0],
-                cn: text[1],
-                en: text[0]
+                src: opt.path + res.en + '/' + index,
+                cn: item,
+                en: index
             };
-            var tpl = '<a href="javascript:;" title="#{cn}" data-code="[#{name}:#{cn}]"><img src="#{src}_thumb.gif" width="22" height="22" alt="#{cn}"/></a>';
+            var tpl = '<a href="javascript:;" title="#{cn}" data-code="[#{name}:#{cn}]"><img src="#{src}.gif" width="22" height="22" alt="#{cn}"/></a>';
             return template(tpl, data);
         }).join('');
     }
