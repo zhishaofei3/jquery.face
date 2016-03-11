@@ -22,7 +22,7 @@ module.exports = {
                 cn: item,
                 en: index
             };
-            var tpl = '<a href="javascript:;" title="#{cn}" data-code="[#{name}:#{cn}]"><img src="#{src}.gif" width="22" height="22" alt="#{cn}"/></a>';
+            var tpl = '<a href="javascript:;" title="#{cn}" data-code="[#{name}:#{en}:#{cn}]"><img src="#{src}.gif" width="22" height="22" alt="#{cn}"/></a>';
             return template(tpl, data);
         }).join('');
     }

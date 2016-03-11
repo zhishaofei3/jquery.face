@@ -1,3 +1,10 @@
+/**
+ * jquery表情组件
+ * 
+ * Date: 2016-03-11
+ * WEB: https://github.com/kyo4311/jquery.face
+ */
+
 (function() {
 
     var face = require('./config.js');
@@ -6,13 +13,26 @@
     var insertText = require('./insertText.js'); //负责向textarea插入字符串
     var position = require('./position.js'); //根据按钮显示div的位置
 
+
+
     $.extend({
-        sinaface: function(opt) {
+        face: function(opt) {
             var index = 0;
             var div = create.creatDiv();
             var tab = create.creatTab(face);
             var handle
             var inputArea;
+
+            var defaults = {
+                path: '',
+                autoParse: false,
+                before: function() {},
+                after: function() {}
+            };
+
+
+            opt = $.extend({}, defaults, opt);
+
 
             div.find('.sina-face-head').append(tab);
 
@@ -35,7 +55,12 @@
                 //点击图标插入
                 .on('click', '.sina-face-body a', function(e) {
                     var code = $(this).data('code');
+
+
+                    opt.before.call(null, opt.textarea, handle, code);
                     insertText(inputArea[0], code);
+                    var parseHtml = opt.autoParse ? parse(inputArea.val()) : '';
+                    opt.after.call(null, opt.textarea, handle, code, parseHtml);
                     div.hide();
                 })
                 //阻止关闭
@@ -48,6 +73,9 @@
                 });
 
 
+            function parse(str) {
+                return str.replace(/\[([^\[\]]+):([^\[\]]+):([^\[\]]+)\]/g, '<img src="' + opt.path + '$1/$2.gif" alt="$3">');
+            }
 
             function show() {
                 var i = Math.max(index - 3, 0);
@@ -59,8 +87,9 @@
                 tab.show().eq(i).prevAll('a').hide();
             }
 
-
-
+            return {
+                getParseHtml: parse
+            };
         }
     });
 
