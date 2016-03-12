@@ -1,4 +1,4 @@
-.sina-face{
+.jquery-face{
     z-index: 300;
     width: 455px;
     font-size: 12px;
@@ -7,15 +7,25 @@
     position: absolute;
     display: none;
     border: 1px solid #E8E8E8;
+    user-select: none; 
+    -o-user-select: none; 
+    -moz-user-select: none; 
+    -khtml-user-select: none; 
+    -webkit-user-select: none;
 }
 
-.sina-face-head{
+.jquery-face a{
+    text-decoration: none;
+    color: #333;
+}
+
+.jquery-face-head{
     padding: 10px 10px 0 10px;
     height: 20px;
     overflow: hidden;
     
 }
-.sina-face-head a{
+.jquery-face-head a{
     margin: 0 8px 0 0;
     height: 30px;
     line-height: 30px;
@@ -26,17 +36,17 @@
     float: left;
     padding: 0 5px;
 }
-.sina-face-head a.current{
+.jquery-face-head a.current{
     background: #ccc;
 }
-.sina-face-body{
+.jquery-face-body{
     zoom:1;
     padding: 1px;
     margin: 9px 0 9px 9px;
     overflow: hidden;
 }
 
-.sina-face-body a{
+.jquery-face-body a{
     width: 22px;
     width: 22px;
     padding: 3px;
@@ -45,7 +55,7 @@
     border:1px solid #e8e8e8;
     margin: -1px 0 0 -1px;
 }
-.sina-face-body a:hover{
+.jquery-face-body a:hover{
     border:1px solid #0095cd;
     position: relative;
     z-index: 1;

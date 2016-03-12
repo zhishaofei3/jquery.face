@@ -13,6 +13,9 @@
     height: 100px;
     outline: none;
 }
+.jquery-face-wrap{
+    padding: 50px;
+}
 
 </style>
 </head>
@@ -22,37 +25,55 @@
 </div>
 
 <div id="box" class="a1">
-    <div class="sina-face-wrap">
+    <div class="jquery-face-wrap">
         <div>
-            <textarea id="liveChatContent" spellcheck="false" class="sina-face-area"></textarea>
+            <textarea id="liveChatContent" spellcheck="false" class="jquery-face-input"></textarea>
         </div>
-        <input class="sina-face-handle" type="button" value="表情">
-        <input class="sina-face-parse" type="button" value="解析">
+        <input class="jquery-face-handle" type="button" value="表情">
+        <input class="parse" type="button" value="解析">
     </div>
 </div>
 
 <script type="text/html" id="tpl">
-<div class="sina-face-wrap">
-    <input  class="sina-face-area" style="width: 500px;" /><a href="javascript:;" class="sina-face-handle">表情</a>
+<div class="jquery-face-wrap">
+    <input  class="jquery-face-input" style="width: 500px;" />
+    <input class="jquery-face-handle" type="button" value="表情">
+    <input class="parse" type="button" value="解析">
 </div>
 </script>
 
 <script type="text/javascript" src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
 <script type="text/javascript" src="./jquery.sinaface.min.js"></script>
 <script type="text/javascript">
+
+    var parseBox = $('#res');
+
     var face = $.face({
         path : 'face/',
+        // wrap: '.jquery-face-wrap',
+        // input: '.jquery-face-input',
+        // handle: '.jquery-face-handle',
         autoParse : false,
+        autoClose: false,
         before:function(input, btn){
 
         },
         after:function(input, btn, code, parseHtml){
+
         }
     });
 
+    for (var i = 20; i >= 0; i--) {
+        $('#box').append($('#tpl').html());
+    };
 
-    console.log(face);
-    $('#box').append($('#tpl').html());
+    $(document).on('click', '.parse', function(){
+        var textarea = $(this).parents('.jquery-face-wrap').find('.jquery-face-input').val();
+
+        var html = face.getParseHtml(textarea);
+
+        parseBox.html(html);
+    });
 </script>
 </body>
 </html>

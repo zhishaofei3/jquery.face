@@ -10,6 +10,9 @@ module.exports = function(handle, div) {
     var wWidth = win.width();
     var wHeight = win.height();
 
+
+    var sTop = win.scrollTop();
+
     var dLeft;
     var dTop;
 
@@ -20,7 +23,7 @@ module.exports = function(handle, div) {
         dLeft = wWidth - right - div.outerWidth();
     }
 
-    if (top + div.outerHeight() < wHeight) {
+    if (top - sTop + div.outerHeight() < wHeight) {
         dTop = top + height;
     } else {
         dTop = top - div.outerHeight();

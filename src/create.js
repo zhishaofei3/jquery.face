@@ -1,12 +1,11 @@
 module.exports = {
     creatTab: function(face) {
-        var html = '';
-        $.each(face, function(index, item) {
+        var html =  $.map(face, function(item, index) {
             item.index = index;
             var tpl = '<a href="javascript:;" data-index="#{index}" data-cn="#{cn}" data-en="#{en}">#{cn}</a>';
-            html += template(tpl, item);
-        });
-        return $(html);
+            return  template(tpl, item);
+        }).join('');
+        return $(html);       
     },
     creatDiv: function() {
         return $(require('./layout.html'));

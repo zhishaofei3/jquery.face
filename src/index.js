@@ -25,7 +25,11 @@
 
             var defaults = {
                 path: '',
-                autoParse: false,
+                wrap : '.jquery-face-wrap',
+                input :'.jquery-face-input',
+                handle: '.jquery-face-handle',
+                autoParse: true,
+                autoClose: true,
                 before: function() {},
                 after: function() {}
             };
@@ -34,37 +38,45 @@
             opt = $.extend({}, defaults, opt);
 
 
-            div.find('.sina-face-head').append(tab);
+            console.log(opt);
+
+
+
+
+            div.find('.jquery-face-head').append(tab);
 
             //触发按钮
             $(document)
-                .on('click', '.sina-face-handle', function(e) {
+                .on('click', opt.handle, function(e) {
                     handle = $(this);
-                    inputArea = $(this).parents('.sina-face-wrap').find('.sina-face-area');
+                    inputArea = $(this).parents(opt.wrap).find(opt.input);
 
                     show(index);
                     e.stopPropagation();
                 })
                 //Tab切换
-                .on('click', '.sina-face-head a', function(e) {
+                .on('click', '.jquery-face-head a', function(e) {
                     index = $(this).data('index');
                     $(this).addClass('current').siblings('a').removeClass();
                     show(index);
                     e.stopPropagation();
                 })
                 //点击图标插入
-                .on('click', '.sina-face-body a', function(e) {
+                .on('click', '.jquery-face-body a', function(e) {
                     var code = $(this).data('code');
-
 
                     opt.before.call(null, opt.textarea, handle, code);
                     insertText(inputArea[0], code);
                     var parseHtml = opt.autoParse ? parse(inputArea.val()) : '';
                     opt.after.call(null, opt.textarea, handle, code, parseHtml);
-                    div.hide();
+
+                    if(opt.autoClose){
+                        div.hide();
+                    }
+
                 })
                 //阻止关闭
-                .on('click', '.sina-face', function(e) {
+                .on('click', '.jquery-face', function(e) {
                     e.stopPropagation();
                 })
                 //空白处点击，关闭表情层
@@ -81,7 +93,7 @@
                 var i = Math.max(index - 3, 0);
                 var body = create.creatBody(face[index], opt);
                 tab.eq(index).addClass('current').siblings('a').removeClass();
-                div.find('.sina-face-body').html(body);
+                div.find('.jquery-face-body').html(body);
                 div.show().appendTo('body');
                 position(handle, div);
                 tab.show().eq(i).prevAll('a').hide();
