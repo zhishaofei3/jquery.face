@@ -43,23 +43,37 @@
 </script>
 
 <script type="text/javascript" src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
-<script type="text/javascript" src="./jquery.sinaface.min.js"></script>
+<script type="text/javascript" src="./jquery.face.min.js"></script>
 <script type="text/javascript">
 
     var parseBox = $('#res');
 
     var face = $.face({
-        path : 'face/',
-        // wrap: '.jquery-face-wrap',
-        // input: '.jquery-face-input',
-        // handle: '.jquery-face-handle',
-        autoParse : false,
-        autoClose: false,
-        before:function(input, btn){
 
+        path : 'face/', //表情图片地址
+
+        wrap: '.jquery-face-wrap', //一组表情选择器的外框
+        input: '.jquery-face-input', //一组表情选择器的input框或是textara框
+        handle: '.jquery-face-handle', //一组表情选择器的点击触发按钮
+
+        autoParse : false, //当autoParse为true的时候有效,after的回调方法的第四个参数有效
+        autoClose: false, //选择表情之后，正否自动关闭
+
+        //在插入表情之前执行
+        before:function(input, handle, code){
+            //input 表情输入框的jquery对象
+            //handle 触发按钮的jquery对象
+            //code 当点选中的表情代码
+            console.log(input, handle, code);
         },
-        after:function(input, btn, code, parseHtml){
 
+        //在插入表情之后执行
+        after:function(input, handle, code, parseHtml){
+            //input 表情输入框的jquery对象
+            //handle 触发按钮的jquery对象
+            //code 当点选中的表情代码
+            //parseHtml 表情输入框所有内容转换后的html，当autoParse为true的时候有效
+            console.log(input, handle, code, parseHtml);
         }
     });
 

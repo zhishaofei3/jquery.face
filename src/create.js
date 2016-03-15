@@ -1,11 +1,11 @@
 module.exports = {
     creatTab: function(face) {
-        var html =  $.map(face, function(item, index) {
+        var html = $.map(face, function(item, index) {
             item.index = index;
             var tpl = '<a href="javascript:;" data-index="#{index}" data-cn="#{cn}" data-en="#{en}">#{cn}</a>';
-            return  template(tpl, item);
+            return template(tpl, item);
         }).join('');
-        return $(html);       
+        return $(html);
     },
     creatDiv: function() {
         return $(require('./layout.html'));
@@ -26,7 +26,6 @@ module.exports = {
         }).join('');
     }
 };
-
 
 function template(template, data) {
     return template.replace(/#\{([\s\S]+?)\}/g, function(a, b) {

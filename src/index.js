@@ -1,8 +1,9 @@
 /**
  * jquery表情组件
  * 
- * Date: 2016-03-11
- * WEB: https://github.com/kyo4311/jquery.face
+ * author kyo4311
+ * date: 2016-03-11
+ * site: https://github.com/kyo4311/jquery.face
  */
 
 (function() {
@@ -13,20 +14,18 @@
     var insertText = require('./insertText.js'); //负责向textarea插入字符串
     var position = require('./position.js'); //根据按钮显示div的位置
 
-
-
     $.extend({
         face: function(opt) {
             var index = 0;
             var div = create.creatDiv();
             var tab = create.creatTab(face);
-            var handle
+            var handle;
             var inputArea;
 
             var defaults = {
-                path: '',
-                wrap : '.jquery-face-wrap',
-                input :'.jquery-face-input',
+                path: '', //设置图片路径
+                wrap: '.jquery-face-wrap',
+                input: '.jquery-face-input',
                 handle: '.jquery-face-handle',
                 autoParse: true,
                 autoClose: true,
@@ -37,13 +36,7 @@
 
             opt = $.extend({}, defaults, opt);
 
-
-            console.log(opt);
-
-
-
-
-            div.find('.jquery-face-head').append(tab);
+            div.find('.jquery-face-head').append(tab)
 
             //触发按钮
             $(document)
@@ -65,12 +58,12 @@
                 .on('click', '.jquery-face-body a', function(e) {
                     var code = $(this).data('code');
 
-                    opt.before.call(null, opt.textarea, handle, code);
+                    opt.before.call(null, inputArea, handle, code);
                     insertText(inputArea[0], code);
                     var parseHtml = opt.autoParse ? parse(inputArea.val()) : '';
-                    opt.after.call(null, opt.textarea, handle, code, parseHtml);
+                    opt.after.call(null, inputArea, handle, code, parseHtml);
 
-                    if(opt.autoClose){
+                    if (opt.autoClose) {
                         div.hide();
                     }
 
