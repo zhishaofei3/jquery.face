@@ -1,15 +1,15 @@
 /**
  * jquery表情组件
  * 
- * author kyo4311
- * date: 2016-03-11
- * site: https://github.com/kyo4311/jquery.face
+ * @author kyo4311
+ * @date: 2016-03-11
+ * @site: https://github.com/kyo4311/jquery.face
  */
 
 (function() {
 
     var face = require('./config.js');
-    var css = require('./css.css'); //创建css
+    var css = require('./css.js'); //创建css
     var create = require('./create.js'); //创建组件的方法
     var insertText = require('./insertText.js'); //负责向textarea插入字符串
     var position = require('./position.js'); //根据按钮显示div的位置

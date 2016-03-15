@@ -5,6 +5,15 @@ var rename = require("gulp-rename");
 var webpack = require('gulp-webpack');
 var removeFiles = require('gulp-remove-files');
 
+var css2js = require("gulp-css2js");
+
+
+gulp.task('css', function() {
+    return gulp.src('src/**/*.css')
+        .pipe(css2js())
+        .pipe(gulp.dest("./src/"));
+});
+
 gulp.task('lint', function() {
     return gulp.src('src/**/*.js')
         .pipe(jshint())

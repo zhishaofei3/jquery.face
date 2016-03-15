@@ -15,10 +15,12 @@ module.exports = {
         loaders: [{
             test: /\.html$/,
             loader: 'html-loader'
-        }, {
-            test: /\.css$/,
-            loader: "style!css"
-        }]
+        }
+        // , {
+        //     // test: /\.css$/,
+        //     // loader: "style!css"
+        // }
+        ]
     },
     output: {
         // libraryTarget: 'amd',
