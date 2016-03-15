@@ -93,6 +93,11 @@
             }
 
             return {
+                /**
+                 * 获取解析后的html字符串  
+                 * @param {string} [str] [需要解析的字符串]
+                 * @return {string}
+                 */
                 getParseHtml: parse
             };
         }

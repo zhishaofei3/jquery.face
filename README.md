@@ -58,7 +58,7 @@ var face = $.face({
 });
 $(document).on('click', '.parse', function(){
     var str = $(this).parents('.jquery-face-wrap').find('.jquery-face-input').val();
-    var html = face.getParseHtml(str);
+    var html = face.getParseHtml(str); //取获解析后的html字符串
     parseBox.html(html);
 });
 ```
